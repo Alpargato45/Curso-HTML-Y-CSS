@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formularios</title>
+</head>
+
+<body>
+    <p>
+        <h1 style="text-align: center">HOJA DE INSCRIPCIÓN</h1>
+        <h1 style="text-align: center">EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+    </p>
+    <form>
+        <fieldset style="background-color: bisque">
+            <legend>Datos Personales</legend>
+            <p>
+                <!--Lo suyo sería hacerlo con una tabla-->
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" />
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" />
+                <label for="dni">DNI</label>
+                <input type="text" name="dni" />
+            </p>
+            <p>
+                <label for="localidad">Localidad Nacimiento</label>
+                <input type="text" name="localidad" />
+                <label for="provincia">Provincia</label>
+                <select name="provincia">
+                    <option value="Z">Zaragoza</option>
+                    <option>Huesca</option>
+                    <option>Teruel</option>
+                    <option>Malaga</option>
+                </select>
+                <label for="fecha">Fecha Nacimiento</label>
+                <input type="date" name="fecha" />
+            </p>
+            <p>
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" />
+                <label for="codigo">Código Postal</label>
+                <input type="number" name="codigo" />
+            </p>
+        </fieldset>
+        <fieldset style="background-color: aqua">
+            <legend>Forma de Acceso</legend>
+            <ul style="list-style: none">
+                <li><input type="radio" name="modo" value="directo" />Directo
+                    <ul style="list-style: none">
+                        <li><input type="radio" name="etapa" value="logse"/>Bachillerato</li>
+                        <li><input type="radio" name="etapa" value="experimental"/>Experimental</li>
+                        <li><input type="radio" name="etapa" value="cou"/>COU</li>
+                        <li><input type="radio" name="etapa" value="fp2"/>FP2</li>
+                        <li><input type="radio" name="etapa" value="otros"/>Otros</li>
+                    </ul>
+                </li>
+                <li><input type="radio" name="modo" value="prueba"/>Prueba Libre</li>
+            </ul>
+        </fieldset>
+        <fieldset style="background-color: aliceblue">
+            <legend>Documentos Adjuntados</legend>
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="archivo" value="dni"/>Fotocopia DNI
+                    </td>
+                    <td>
+                        <input type="checkbox" name="archivo" value="certificado"/>Certificado Académico
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" name="archivo" value="otros"/>Otros Documentos
+                        <input type="text"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar Solicitud">
+        </p>
+    </form>
+</body>
+
+</html>
